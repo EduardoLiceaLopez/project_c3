@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="user-icon">
+    <ion-icon name="person-outline"></ion-icon>
+  </div>
+  <ion-item>
+    <ion-label position="floating">Nombre de Usuario</ion-label>
+    <ion-input type="text" [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <div class="ion-text-center">
+    <ion-button expand="block" (click)="onLoginClick()">Iniciar Sesión</ion-button>
+  </div>
+
+  <div class="ion-text-center">
+    <a routerLink="/forgot-password">¿Olvidaste tu contraseña?</a>
+  </div>
+
+  <div class="ion-text-center">
+    <a routerLink="/register">Registrarse</a>
+  </div>
+</ion-content>

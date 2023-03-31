@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle de usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información del usuario</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-label><b>Nombre completo: </b>{{ user?.name }} {{ user?.middle_name }} {{ user?.last_name }}</ion-label><br>
+      <ion-label><b>CURP: </b>{{ user?.curp }}</ion-label><br>
+      <ion-label><b>RFC: </b>{{ user?.rfc }}</ion-label><br>
+      <ion-label><b>Teléfono: </b>{{ user?.phone_number }}</ion-label><br>
+      <ion-label><b>Correo electrónico: </b>{{ user?.email }}</ion-label><br>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button (click)="deleteUser()">Eliminar usuario</ion-button>
+</ion-content>

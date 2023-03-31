@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>AGREGAR TIPO DE USUARIO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre del tipo de usuario</ion-label>
+    <ion-input [(ngModel)]="userType.name"></ion-input>
+    <ion-note>Tipo de dato esperado: cadena de texto</ion-note>
+  </ion-item>
+
+  <ion-button expand="block" (click)="addUserType()">Agregar tipo de usuario</ion-button>
+
+</ion-content>

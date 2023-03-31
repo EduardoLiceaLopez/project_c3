@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-title>USUARIOS</ion-title>
+    <ion-searchbar placeholder="Buscar" animated (ionChange) ="searchUser($event)"></ion-searchbar>   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list [inset]="true">
+    <ion-item *ngFor="let user of searchedUser.users.length > 0 ? searchedUser.users : users" [routerLink]="['/users', user.id]">
+
+      <ion-label>{{user.name}} {{user.middle_name}} {{user.last_name}}</ion-label>
+      <ion-avatar slot="end" class="detail"> 
+        <ion-icon name="search-outline" [routerLink]="['/users', user.id]"></ion-icon>
+      </ion-avatar>
+    </ion-item>
+  </ion-list>
+  <ion-button [routerLink]="['/addUsers']" routerDirection="root">Nuevo usuario</ion-button>
+</ion-content>

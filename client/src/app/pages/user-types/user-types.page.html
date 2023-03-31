@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>TIPOS DE USUARIOS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let type of userTypesList">{{ type.name }}</ion-item>
+  </ion-list>
+  <ion-button [routerLink]="['/add-user-types']" routerDirection="root">Nuevo tipo usuario</ion-button>
+</ion-content>
